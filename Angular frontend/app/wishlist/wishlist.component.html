@@ -1,0 +1,22 @@
+<app-heading></app-heading>
+<div *ngIf="responseBack.length" class="container" id="mainrow">
+    <div class="display-4">My WishList({{responseBack.length}})</div><hr>
+    <div *ngFor="let item of responseBack">
+        <div class="row">
+            <div class="col-md-2">
+                <button class="btn" id="imag" (click)="itemDescription(item)"><img class="img-fluid" src="{{item.productImage}}" alt="image"></button>
+            </div>
+            <div class="col-md-9" id="desc">
+                <button class="close" id="remove" (click)="toRemove(item.wishListId)">&times;</button>
+                <button class="btn" (click)="itemDescription(item)"><div class="h4">{{item.productName}}</div></button><br>
+                <div class="h3">Rs. {{item.productPrice}}</div>
+            </div>
+        </div><hr>
+    </div>
+</div>
+
+<div *ngIf="!responseBack.length" class="container" id="empty">
+    <div class="display-2">Your Wish List is empty!</div><br>
+    <a href="/products"><div class="btn btn-light">Add products</div></a>
+</div>
+

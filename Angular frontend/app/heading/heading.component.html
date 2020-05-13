@@ -1,0 +1,45 @@
+<header id="header" class="fixed-top align-items-center">
+  <a href="#"><img src="assets/images/razor.png" alt="logo" class="img-fluid"></a>
+  <div class="container d-flex">
+      <nav class="nav-menu d-lg-block">
+          <ul>
+              <li><a href="/home"><button class="btn">Home</button></a></li>
+              <li><div class="dropdown">
+                  <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Categories
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="/fashion">Fashion And Apparel</a>
+                    <a class="dropdown-item" href="/electronics">Electronics</a>
+                    <a class="dropdown-item" href="/essentials">Essentials</a>
+                  </div>
+                </div></li>
+              <li><button class="btn" (click)="wishlist()">Wish List&nbsp;<span *ngIf="responseBack2">{{responseBack2}}</span></button></li>
+              <li><button class="btn" (click)="cartpage()">Cart&nbsp;<span *ngIf="responseBack">{{responseBack}}</span></button></li>
+              <!-- <li><button class="btn">About</button></li>
+              <li><button class="btn">Contact</button></li> -->
+              
+          </ul>
+          
+      </nav>
+  </div>
+  <div class="dropdown" id="account">
+    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Hello, {{responseBack3.firstName}}
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="/orders">My Orders</a>
+      <a class="dropdown-item" href="/account">Account Details</a>
+      <a class="dropdown-item btn" (click)="logout()">Logout</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-11">
+    <!-- <form class="form-inline"> -->
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" [(ngModel)]="productName">
+      <button id="search" class="btn btn-light my-2" type="submit" (click)="searching(productName)">Search</button>
+    <!-- </form> -->
+  </div>
+</div>
+</header>

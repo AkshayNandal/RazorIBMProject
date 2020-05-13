@@ -1,0 +1,63 @@
+<app-admin></app-admin>
+<form class="form">
+    <div id="add1" class="col-md-4" style="height:1000px">
+            
+<div class="form-group">
+    Category
+    <!-- <div class="form-control">
+        <label class="radio-inline">
+            <input type="radio" value="Electronics"[(ngModel)]=" productCategory" name="productCategory" >Electronics
+        </label>
+        <label class="radio-inline">
+            <input type="radio" value="Fashion"[(ngModel)]=" productCategory" name="productCategory" >Fashion
+        </label>
+        <label class="radio-inline">
+            <input type="radio" value="Essentials"[(ngModel)]=" productCategory" name="productCategory" >Essentials
+        </label>
+    </div> -->
+    <select id="productCategory" name="productCategory" [(ngModel)]="productCategory" class="form-control">
+        <option value="Electronics">Electronics</option>
+        <option value="Fashion">Fashion</option>
+        <option value="Essentials">Essentials</option>
+    </select>
+</div>&nbsp;&nbsp;
+
+<div class="form-group">
+    Sub Category
+        <label for="productSubCategory">
+            
+        </label>
+        <select id="productSubCategory" name="productSubCategory" [(ngModel)]="productSubCategory" class="form-control">
+            <option value="SmartPhone">smartphone</option>
+            <option value="Refrigerator">refrigerator</option>
+            <option value="TV">tv</option>
+            <option value="Laptop">laptop</option>
+            <option value="Food">food</option>
+            <option value="Cleaning">cleaning</option>
+            <option value="Hygiene">hygiene</option>
+            <option value="T-shirt">t-Shirt</option>
+            <option value="Jeans">jeans</option>
+            <option value="Shirt">shirt</option>
+            <option value="Trouser">trouser</option>
+        </select>
+</div>&nbsp;&nbsp;
+<fieldset class="form-group">
+    <input type="text"  class="form-control" [(ngModel)]="productDescription"id="productDescription" name="productDescription" placeholder="product description">
+</fieldset>
+<fieldset class="form-group">
+    <input type="text"  class="form-control" [(ngModel)]="productName"id="productName" name="productName" placeholder="product name">
+</fieldset>
+<fieldset class="form-group">
+    <input type="number"  class="form-control" [(ngModel)]=" productPrice"id="productPrice" name="productPrice" placeholder="product price">
+</fieldset>
+<fieldset class="form-group">
+    <input type="text"  class="form-control" [(ngModel)]=" unitStock"id="unitStock" name="unitStock" placeholder="unit stock">
+</fieldset>
+<fieldset class="form-group">
+    <input type="text"  class="form-control" [(ngModel)]="productImage" id="productImage" name="productImage" placeholder="product image">
+</fieldset>
+
+     <button type="submit" class="btn btn-primary btn-block" (click)="addProduct()">Add Product</button>
+</div>
+</form>
+

@@ -1,0 +1,26 @@
+header{
+    height: 90px;
+    background-color: #383737;
+}
+.container{
+    margin-left: 550px;
+}
+.btn{
+    color: white;
+    margin-right: 10px;
+    border: 1px solid white;
+}
+.btn:hover{
+    color: #383737;
+    background-color: white;
+}
+table{
+    margin-top: 90px;
+}
+thead{
+    background-color: #383737;
+    color: white;
+}
+tbody{
+    background-color: #f5deb3b6;
+}

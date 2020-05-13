@@ -1,0 +1,14 @@
+.container{
+    margin-top: 210px;
+}
+.card{
+    text-align: center;
+    height: 350px;
+    margin-bottom: 20px;
+    background-color: #f5deb3ab;
+}
+.card:hover{
+    background-color: white;
+    border: 2px solid steelblue;
+    transition: 0.4s ease-in;
+}

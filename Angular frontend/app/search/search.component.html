@@ -1,0 +1,26 @@
+<app-heading></app-heading>
+<div *ngIf="responseBack.length" class="container-fluid">
+    <div id="first" class="container-fluid display-4">Search Results: {{productName}}</div>
+    <div class="row">
+    <div *ngFor="let item of responseBack">
+        <div class="card text-center float-left">
+            <button class="btn" (click)="itemDescription(item.productId)">
+                <img class="card-img-top" src="{{item.productImage}}" alt="image">
+            <div class="card-body">
+                <div class="card-title h4">{{item.productName}}</div>
+                <div class="card-text">
+                    {{item.productCategory}}<br>
+                    {{item.productSubCategory}}<br>
+                    <strong>Rs. {{item.productPrice}}</strong><br><br>
+                </div>
+          </div>
+        </button>
+        </div>
+    </div>
+</div>
+</div>
+<div *ngIf="!responseBack.length" class="container" id="empty">
+    <div class="display-4">No such product found. Sorry for the inconvenince!</div><br>
+    <a href="/front"><div class="btn btn-light">Add products</div></a>
+</div>
+<app-footing></app-footing>

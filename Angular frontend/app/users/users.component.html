@@ -1,0 +1,33 @@
+<app-admin></app-admin>
+
+<table border="1px" id="get" class="table table-stripped">
+    <thead class="thead">
+        <tr>
+            
+            <th>User id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Phone number</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Gender</th>
+            <th>City</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let user of users">
+        <tr >
+            
+            <td>{{user.userId}}</td>
+           
+            <td>{{user.firstName}}</td>
+            <td>{{user.lastName}}</td>
+            <td>{{user.phoneNumber}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.password}}</td>
+            <td>{{user.gender}}</td>
+            <td>{{user.city}}</td>
+        </tr>
+    </tbody>
+</table>
+
+

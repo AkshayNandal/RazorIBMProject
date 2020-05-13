@@ -1,0 +1,96 @@
+
+<!-- <img src="assets/images/img.jpg" id="content" class="img-fluid"> -->
+
+
+<app-heading></app-heading>
+<div class="container-fluid">
+<div id="first" class="container-fluid display-3">Fashion & Apparels</div>
+<div *ngIf="responseBack1.length">
+<div class="row">
+    <div class="col-md-12">
+    <div class="h1 text-center">T-Shirts</div></div>
+<div *ngFor="let item of responseBack1">
+    <div class="card text-center float-left">
+        <button class="btn" (click)="itemDescription(item.productId)">
+            <img class="card-img-top" src="{{item.productImage}}" alt="image">
+        <div class="card-body">
+            <div class="card-title h4">{{item.productName}}</div>
+            <div class="card-text">
+                {{item.productCategory}}<br>
+                {{item.productSubCategory}}<br>
+                <strong>Rs. {{item.productPrice}}</strong><br><br>
+            </div>
+      </div>
+    </button>
+    </div>
+</div>
+</div>
+</div>
+
+<div *ngIf="responseBack2.length">
+<div class="row">
+    <div class="col-md-12">
+        <div class="h1 text-center">Jeans</div></div>
+<div *ngFor="let item of responseBack2">
+    <div class="card text-center float-left">
+        <button class="btn" (click)="itemDescription(item.productId)">
+            <img class="card-img-top" src="{{item.productImage}}" alt="image">
+        <div class="card-body">
+            <div class="card-title h4">{{item.productName}}</div>
+            <div class="card-text">
+                {{item.productCategory}}<br>
+                {{item.productSubCategory}}<br>
+                <strong>Rs. {{item.productPrice}}</strong><br><br>
+            </div>
+      </div>
+    </button>
+    </div>
+</div>
+</div>
+</div>
+
+<div *ngIf="responseBack3.length">
+<div class="row">
+    <div class="col-md-12">
+        <div class="h1 text-center">Shirts</div></div>
+<div *ngFor="let item of responseBack3">
+    <div class="card text-center float-left">
+        <button class="btn" (click)="itemDescription(item.productId)">
+            <img class="card-img-top" src="{{item.productImage}}" alt="image">
+        <div class="card-body">
+            <div class="card-title h4">{{item.productName}}</div>
+            <div class="card-text">
+                {{item.productCategory}}<br>
+                {{item.productSubCategory}}<br>
+                <strong>Rs. {{item.productPrice}}</strong><br><br>
+            </div>
+      </div>
+    </button>
+    </div>
+</div>
+</div>
+</div>
+
+<div *ngIf="responseBack4.length">
+<div class="row">
+    <div class="col-md-12">
+        <div class="h1 text-center">Trousers</div></div>
+<div *ngFor="let item of responseBack4">
+    <div class="card text-center float-left">
+        <button class="btn" (click)="itemDescription(item.productId)">
+            <img class="card-img-top" src="{{item.productImage}}" alt="image">
+        <div class="card-body">
+            <div class="card-title h4">{{item.productName}}</div>
+            <div class="card-text">
+                {{item.productCategory}}<br>
+                {{item.productSubCategory}}<br>
+                <strong>Rs. {{item.productPrice}}</strong><br><br>
+            </div>
+      </div>
+    </button>
+    </div>
+</div>
+</div>
+</div>
+
+</div>

@@ -1,0 +1,49 @@
+#first{
+    margin-block-start: 95px;
+    text-align: center;
+    background-color: white;
+    color: steelblue;
+}
+.row{
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.card{
+    width: 260px;
+    height:350px;
+    background-color: #ffffff8e;
+    color: black;
+    margin-top: 30px;
+    margin-right: 50px;
+}
+.card:hover{
+    border: 2px solid steelblue;
+    background-color: white;
+    transition: 0.4s ease-in;
+}
+
+
+#empty{
+    margin-top: 90px;
+    background-color: #ffebcdbd;
+    text-align: center;
+    width: 800px;
+    height: 550px;
+    padding-top: 150px;
+}
+#empty .btn{
+    background-color: steelblue;
+    color: white;
+}
+#empty .btn:hover{
+    background-color: white;
+    color: steelblue;
+}
+img{
+    max-width: 200px;
+    max-height: 200px;
+}
+.card-img-top{
+    height: 180px;
+}

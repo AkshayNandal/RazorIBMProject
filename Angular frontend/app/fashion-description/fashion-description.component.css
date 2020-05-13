@@ -1,0 +1,32 @@
+#left{
+    background-color: #ffebcdbd;
+    text-align: center;
+    border-right: 1px solid;
+    padding-bottom: 61px;
+}
+#right{
+    background-color: #ffebcdbd;
+    /* color: white; */
+    
+}
+.row{
+    margin-top: 120px;
+    margin-right: 50px;
+    margin-left: 50px;
+    height: 100%;
+    
+}
+img{
+    max-height: 400px;
+    max-width: 400px;
+}
+.btn{
+    margin: 20px;
+    width: 190px;
+    height: 50px;
+    background-color: steelblue;
+}
+.btn:hover{
+    background-color: white;
+    color: steelblue;
+}

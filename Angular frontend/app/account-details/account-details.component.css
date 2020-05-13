@@ -1,0 +1,16 @@
+.container{
+    margin-top: 200px;
+    margin-bottom: 100px;
+    align-items: center;
+    width: 500px;
+    height: 400px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: white;
+    border-radius: 10%;
+}
+.display-4{
+    color: steelblue;
+    text-align: center;
+    border-bottom: 2px solid steelblue;
+    margin-bottom: 10px;
+}

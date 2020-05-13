@@ -1,0 +1,51 @@
+#mainrow{
+    margin-top: 110px;
+    background-color: #ffebcdbd;
+}
+#imag{
+    margin-left: 30px;
+    width: 100%;
+}
+#imag:hover{
+    border: 2px solid steelblue;
+}
+img{
+    
+    height: 130px;
+    width: 130px;
+}
+
+#desc{
+    margin-left: 20px;
+}
+#desc .h4{
+    display: inline-block;
+}
+.sub{
+    margin-left: 250px;
+}
+#desc #remove{
+    float: right;
+    padding:5px;
+    border: 2px solid;
+    border-radius: 20%;
+}
+#desc .btn:hover{
+    color: steelblue;
+}
+#empty{
+    margin-top: 90px;
+    background-color: #ffebcdbd;
+    text-align: center;
+    width: 800px;
+    height: 550px;
+    padding-top: 150px;
+}
+#empty .btn{
+    background-color: steelblue;
+    color: white;
+}
+#empty .btn:hover{
+    background-color: white;
+    color: steelblue;
+}

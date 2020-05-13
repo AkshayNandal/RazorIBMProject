@@ -1,0 +1,73 @@
+<head>
+    <title>Shopping</title>
+</head>
+
+<body>
+        <div class="row">
+            <div class="col-md-8 text-center" style=" background-color: cornflowerblue;height: 1000px;">
+                <div class="logo float-left">
+                    <img src="assets/images/logo.png" class="img-fluid" alt="logo" id="img">
+            </div>
+            <div class="btn-group float-right" role="group">
+                <!-- <button type="button" class="btn btn-link text-light">Home</button> -->
+                <button type="button" class="btn btn-link text-light">About</button>
+                <button type="button" class="btn btn-link text-light">Contact</button>
+                </div>
+               
+                <blockquote class="display-2 text-light text-center"><strong>Welcome to Razor</strong></blockquote>
+                <div class="h2 text-center text-light">Exciting deals and a huge variety of products. Enjoy a seamless experience</div>
+            </div>
+            <div id="second" class="col-md-4" style="height: 1000px;">
+                <div id="top">
+               <!-- <a routerLink="/signin">Sign in as Admin</a> -->
+                <!-- <a routerLink="/addProduct">Add Product</a> -->
+            </div>
+                <div id="signin" class="display-4">Sign In</div><br>
+                <!-- <div class="h5"><a href="#">or Login In</a></div><br><br> -->
+                <form>
+                    
+                    <fieldset class="form-group">
+                        <input required
+                        id="emailid" 
+                       type="text"  
+                        name="emailid"
+                        [(ngModel)]="email"
+                       #emailid="ngModel" 
+                        (change)="displayMessage(emailid)"
+                        pattern="[A-Z a-z 0-9]+@[A-Z a-z]+\.[A-Z a-z]{2,30}"
+                       maxlength="60"
+                       
+                       class="form-control" 
+                       placeholder="EmailId">
+                       
+                        </fieldset>
+                        <div class="alert alert-danger" *ngIf="!emailid.valid && emailid.touched">
+                            <div *ngIf="emailid.errors.required">Please enter your EmailId</div>
+                            <div *ngIf="emailid.errors.maxlength">Max 60 characters</div>
+                            <div *ngIf="emailid.errors.pattern"> Wrong format</div>
+                          </div>
+                          <fieldset class="form-group">
+                            <input required
+                            id="pass" 
+                           type="password"  
+                            name="pass"
+                            [(ngModel)]="password"
+                           #pass="ngModel" 
+                            (change)="displayMessage(pass)"
+                           
+                           class="form-control" 
+                           placeholder="Password">
+                           
+                            </fieldset>
+                            <div class="alert alert-danger" *ngIf="!pass.valid && pass.touched">
+                                <div *ngIf="pass.errors.required">Please enter your password</div>
+                                
+                              </div>
+               <br>
+               <button type="submit" *ngIf="!emailid.valid || !pass.valid" class="btn btn-primary btn-block">Submit</button>
+               <button type="submit" *ngIf="(emailid.valid && pass.valid)" class="btn btn-primary btn-block" (click)="login()">Submit</button>
+                </form>
+                </div>
+        </div>
+
+</body>

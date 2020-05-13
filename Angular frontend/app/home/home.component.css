@@ -1,0 +1,98 @@
+#navigation{
+    background-color: red;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 120px;
+}
+#img{
+    margin-left: 20px;
+    width: 50px;
+    height: 50px;
+}
+.nav > li{
+    list-style-type: none;
+    padding-right: 75px;
+    display: block;
+    float: left;
+    margin-top: 0px;
+    margin-right: 75px;
+}
+
+.card-container{
+    display:inline-block;
+    height: fit-content;
+    padding-top: 180px;
+    padding-left: 75px;
+    width: fit-content;
+}
+
+.card{
+    background-color: #ffffff8e;
+}
+
+#imgCards{
+    height: 350px;
+    width: 320px;
+}
+
+.breaker{
+    margin-top: 75px;
+    padding-top: 25px;
+    margin-bottom: 10px;
+    color: steelblue;
+    background-color: white;
+    border: 1px solid steelblue;
+}
+
+.carousel-slide{
+    width: 400px;
+    height: 380px;
+    margin-left: 500px;
+    margin-top: 10px;
+}
+
+#carouselImg{
+    height: 450px;
+    width: 450px;
+}
+
+/* .background{
+    background-image: image("~src/assets/Images/nature.jpeg");
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+.essentials-cards{
+    display: inline-block;
+    height: fit-content;
+    width: fit-content;
+    padding-top: 20px;
+    padding-left: 75px;
+}
+
+#footer{
+    margin-top: 40px;
+    height: 120px;
+    background-color: rgb(18, 99, 190);
+}
+
+#footerimg{
+    margin-left: 20px;
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+}
+#footer li{
+    list-style-type: none;
+    display: block;
+    float: left;
+}
+
+.card:hover{
+    border: 2px solid steelblue;
+    background-color: white;
+    transition: 0.4s ease-in;
+}

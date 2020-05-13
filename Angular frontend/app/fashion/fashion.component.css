@@ -1,0 +1,43 @@
+
+#first{
+    margin-block-start: 110px;
+    text-align: center;
+    background-color: white;
+    color: steelblue;
+    border: 2px solid steelblue;
+    /* background-color: goldenrod; */
+}
+.row{
+    /* background-color: goldenrod; */
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.card{
+    width: 260px;
+    height:350px;
+    color: black;
+    margin-top: 30px;
+    margin-right: 50px;
+    background-color: #ffffff8e;
+}
+.card:hover{
+    border: 2px solid steelblue;
+    background-color: white;
+    transition: 0.4s ease-in;
+}
+.btn{
+    width: 260px;
+    height: 400px;
+}
+
+img{
+    max-width: 170px;
+    max-height: 170px;
+
+}
+.h1{
+    background-color: white;
+    color: steelblue;
+    border: 2px solid steelblue;
+}

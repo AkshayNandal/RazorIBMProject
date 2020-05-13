@@ -1,0 +1,169 @@
+<head>
+    <title>Shopping</title>
+</head>
+
+<body>
+        <div class="row">
+            <div class="col-md-8 text-center" style=" background-color: cornflowerblue;height: 1000px;">
+                <div class="logo float-left">
+                    <img src="assets/images/razor.png" class="img-fluid" alt="logo" id="img">
+            </div>
+            <div class="btn-group float-right" role="group">
+                <!-- <button type="button" class="btn btn-link text-light">Home</button> -->
+                <button type="button" class="btn btn-link text-light">About</button>
+                <button type="button" class="btn btn-link text-light">Contact</button>
+                </div>
+               
+                <blockquote class="display-2 text-light text-center"><strong>Welcome to Razor</strong></blockquote>
+                <div class="h2 text-center text-light">Exciting deals and a huge variety of products. Enjoy a seamless experience</div>
+            </div>
+            <div id="second" class="col-md-4" style="height: 1000px;">
+                <div id="top">
+               <a routerLink="/signin">Sign in as Admin</a>
+                <!-- <a routerLink="/addProduct">Add Product</a> -->
+            </div>
+                <div id="signin" class="display-4">SignUp</div>
+                <div class="h5"><a href="/signin">or Login In</a></div><br><br>
+                <form>
+                    <fieldset class="form-group">
+                    <input required
+                    id="name" 
+                   type="text"  
+                    name="name"
+                    [(ngModel)]="firstName"
+                   #name="ngModel" 
+                    (change)="displayMessage(name)"
+                   pattern="[A-Z a-z]{5,15}"
+                   minlength="5"
+                   maxlength="15"
+                   
+                   class="form-control" 
+                   placeholder="Firstname">
+                   
+                    </fieldset>
+                    <div class="alert alert-danger" *ngIf="!name.valid && name.touched">
+                        <div *ngIf="name.errors.required">Please enter your Firstname</div>
+                        <div *ngIf="name.errors.minlength">Please enter your Firstname with atleast 5 characters</div>
+                        <div *ngIf="name.errors.pattern"> Only characters allowed</div>
+                      </div>
+                      <fieldset class="form-group">
+                        <input required
+                        id="lname" 
+                       type="text"  
+                        name="lname"
+                        [(ngModel)]="lastName"
+                       #lname="ngModel" 
+                        (change)="displayMessage(lname)"
+                       pattern="[A-Z a-z]{5,15}"
+                       minlength="5"
+                       maxlength="15"
+                       
+                       class="form-control" 
+                       placeholder="Lastname">
+                       
+                        </fieldset>
+                        <div class="alert alert-danger" *ngIf="!lname.valid && lname.touched">
+                            <div *ngIf="lname.errors.required">Please enter your Lastname</div>
+                            <div *ngIf="lname.errors.minlength">Please enter your Lastname with atleast 5 characters</div>
+                            <div *ngIf="lname.errors.pattern"> Only characters allowed</div>
+                          </div>
+
+                          <fieldset class="form-group">
+                            <input required
+                            id="number" 
+                           type="text"  
+                            name="number"
+                            [(ngModel)]="phoneNumber"
+                           #number="ngModel" 
+                            (change)="displayMessage(number)"
+                           pattern="[0-9]{10}"
+                            minlength="10"
+                           maxlength="10"
+                           
+                           class="form-control" 
+                           placeholder="Phone Number">
+                           
+                            </fieldset>
+                            <div class="alert alert-danger" *ngIf="!number.valid && number.touched">
+                                <div *ngIf="number.errors.required">Please enter your PhoneNumber</div>
+                                <div *ngIf="number.errors.minlength">Please enter your Firstname with 10 digits</div>
+                                <div *ngIf="number.errors.pattern"> Only numbers allowed</div>
+                              </div>
+                   
+                              <fieldset class="form-group">
+                                <input required
+                                id="emailid" 
+                               type="text"  
+                                name="emailid"
+                                [(ngModel)]="email"
+                               #emailid="ngModel" 
+                                (change)="displayMessage(emailid)"
+                                pattern="[A-Z a-z 0-9]+@[A-Z a-z]+\.[A-Z a-z]{2,30}"
+                               maxlength="60"
+                               
+                               class="form-control" 
+                               placeholder="EmailId">
+                               
+                                </fieldset>
+                                <div class="alert alert-danger" *ngIf="!emailid.valid && emailid.touched">
+                                    <div *ngIf="emailid.errors.required">Please enter your EmailId</div>
+                                    <div *ngIf="emailid.errors.maxlength">Max 60 characters</div>
+                                    <div *ngIf="emailid.errors.pattern"> Wrong format</div>
+                                  </div>
+                                  <fieldset class="form-group">
+                                    <input required
+                                    id="pass" 
+                                   type="password"  
+                                    name="pass"
+                                    [(ngModel)]="password"
+                                   #pass="ngModel" 
+                                    (change)="displayMessage(pass)"
+                                    minlength="8"
+                                   maxlength="20"
+                                   
+                                   class="form-control" 
+                                   placeholder="Password">
+                                   
+                                    </fieldset>
+                                    <div class="alert alert-danger" *ngIf="!pass.valid && pass.touched">
+                                        <div *ngIf="pass.errors.required">Please enter your password</div>
+                                        <div *ngIf="pass.errors.maxlength">Max 20 characters</div>
+                                        <div *ngIf="pass.errors.minlength"> Min 8 characters</div>
+                                      </div> 
+                            <fieldset class="form-group">
+                                <input type="text" class="form-control" [(ngModel)]="gender"id="gender" name="gender" placeholder="Your gender M/F">
+                                </fieldset>
+                                <fieldset class="form-group">
+                                    <input required
+                                    id="ncity" 
+                                   type="text"  
+                                    name="ncity"
+                                    [(ngModel)]="city"
+                                   #ncity="ngModel" 
+                                    (change)="displayMessage(ncity)"
+                                    pattern="[A-Z a-z]{3,20}"
+                                    
+                                   maxlength="20"
+                                   
+                                   class="form-control" 
+                                   placeholder="City">
+                                   
+                                    </fieldset>
+                                    <div class="alert alert-danger" *ngIf="!ncity.valid && ncity.touched">
+                                        <div *ngIf="ncity.errors.required">Please enter your City</div>
+                                        <div *ngIf="ncity.errors.maxlength">Max 20 characters</div>
+                                        <div *ngIf="ncity.errors.pattern"> Only characters</div>
+                                      </div>
+                   
+                        
+                        <fieldset class="form-group">
+                        <input type="checkbox" name="check">I agree to terms and conditions.<br>
+                    </fieldset>
+                    <button type="submit" *ngIf="!name.valid || !lname.valid || !number.valid || !emailid.valid || !pass.valid || !ncity.valid" class="btn btn-primary btn-block">Submit</button>
+                    <button type="submit" *ngIf="(name.valid && lname.valid && number.valid && emailid.valid && pass.valid && ncity.valid)" class="btn btn-primary btn-block" (click)="register()">Submit</button>
+                    
+            </form>
+            </div>
+        </div>
+
+</body>

@@ -1,0 +1,50 @@
+<app-heading></app-heading>
+<div *ngIf="responseBack.length" class="row justify-content-md-center text-align-center" id="mainrow">
+    <div class="col-md-6" id="left">
+        <div class="display-4">My Cart({{responseBack.length}})</div><hr>
+        <div *ngFor="let item of responseBack">
+            <div class="row">
+                <div class="col-md-3">
+                <button class="btn" id="imag" (click)="itemDescription(item.productId)"><img class="img-fluid" src="{{item.productImage}}" alt="image"></button></div>
+               <div class="col-md-8" id="desc">
+                    <button class="close" id="remove" (click)="toRemove(item.cartId)">&times;</button>
+                    <button class="btn" (click)="itemDescription(item.productId)"><div class="h4">{{item.productName}}</div></button><br>
+                    <div class="h3">Rs. {{item.productPrice}}</div>
+                   <div id="qty">
+                       <div *ngIf="item.productQuantity >= 2">
+                    <button id="dec" class="btn btn-light float-left" (click)="decrement(item)">-</button>
+                       </div>
+                       <div *ngIf="item.productQuantity == 1">
+                           <button id="dec2" class="btn btn-light float-left">-</button>
+                       </div>
+                       <div>
+                    <div class="h4">{{item.productQuantity}}</div>
+                    
+                    <button id="incr" class="btn btn-light" (click)="increment(item)">+</button>
+                </div>
+                    </div>
+                </div>
+            </div><hr>
+        </div>
+    </div>
+    <div class="col-md-3" id="right">
+        <div class="h4">PRICE DETAILS</div><hr>
+        <div *ngFor="let item of responseBack">
+            <p class="h5">{{item.productName}}(x{{item.productQuantity}})</p>
+            <div class="to h5">Rs. {{item.subTotal}}</div>
+        </div>
+        <p class="h5">Delivery fee</p>
+        <div class="to h5">free</div><hr>
+        <p class="h5">Total Amount</p>
+        <div class="to h5">Rs. {{responseBack1}}</div>
+        <!-- <a href="http://localhost:9090/">
+        <button id="order" class="btn btn-primary btn-block" (click)="place()">Place Order</button></a> -->
+        <button id="order" class="btn btn-primary btn-block" (click)="place(responseBack1)">Place Order</button>
+    </div>
+</div>
+
+<div *ngIf="!responseBack.length" class="container" id="empty">
+    <div class="display-2">Your Shopping Cart is empty!</div><br>
+    <a href="/home"><div class="btn btn-light">Add products</div></a>
+</div>
+<app-footing></app-footing>

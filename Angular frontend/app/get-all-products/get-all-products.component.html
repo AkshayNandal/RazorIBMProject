@@ -1,0 +1,34 @@
+<app-admin></app-admin>
+<table border="1px" id="get" class="table table-stripped">
+    <thead class="thead">
+        <tr>
+            
+            <th>Product id</th>
+            <th>Product category</th>
+            <th>Product SubCategory</th>
+            <th>Product Description</th>
+            <th>Product name</th>
+            <th>Product price</th>
+            <th>Unit stock</th>
+            <th>Produt Image</th>
+            <th>Delete</th>
+            <th>Update</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let product of products">
+        <tr >
+            
+            <td>{{product.productId}}</td>
+            <td>{{product.productCategory}}</td>
+            <td>{{product.productSubCategory}}</td>
+            <td>{{product.productDescription}}</td>
+            <td>{{product.productName}}</td>
+            <td>{{product.productPrice}}</td>
+            <td>{{product.unitStock}}</td>
+            <td>{{product.productImage}}</td>
+            <td class="text-center"><button class="btn btn-danger btn-xs" (click)="deleteProduct(product.productId)"><span class="glyphicon glyphicon-remove"></span>Delete</button></td>
+            <td class="text-center"><button class="btn btn-primary btn-xs" (click)="updateProduct(product.productId)"><span class="glyphicon glyphicon-remove"></span>Update</button></td>
+        </tr>
+    </tbody>
+</table>
+
